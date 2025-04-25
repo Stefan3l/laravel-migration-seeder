@@ -15,13 +15,13 @@
 </head>
 <body>
     @include('partials.header')
-
+<section class="bg-light py-5">
     <div class="container">
 
         @yield('contenuto')
 
     </div>
-
+</section>
     @include('partials.footer')
 </body>
 </html>

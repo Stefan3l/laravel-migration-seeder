@@ -12,3 +12,12 @@
 body {
     font-family: "Share Tech Mono", monospace;
 }
+
+.header {
+    background-image: url("../images/train.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250px;
+    opacity: calc(0.8);
+}

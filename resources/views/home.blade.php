@@ -5,8 +5,8 @@
 @endsection
 
 @section('contenuto')
-    <h1>Benvenuto nella home page</h1>
-    <p>Questa è la home page del nostro sito.</p>   
+    
+    <h1 class="text-center mt-5"> Lista dei treni </h1>
 
     <x-table :trains="$trains">
     </x-table>
