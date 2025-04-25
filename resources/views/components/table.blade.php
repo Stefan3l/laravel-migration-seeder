@@ -1,7 +1,7 @@
 @props(['trains'])
 
 <div class="container py-4">
-    <table class="table table-striped table-hover align-middle">
+    <table class="table table-striped table-hover align-middle shadow-black shadow-lg">
         <thead class="table-dark">
             <tr class="text-center">
                 <th scope="col">Azienda</th>              
@@ -11,8 +11,9 @@
                 <th scope="col">Orario di Arrivo</th>
                 <th scope="col">Codice Treno</th>
                 <th scope="col">Numero Carrozze</th>
-                <th scope="col">In Orario</th>
-                <th scope="col">Cancellato</th>
+                <th scope="col">Prezzo</th>
+                <th scope="col">In Orario</th>                
+                <th scope="col">Cancellato</th>                
             </tr>
         </thead>
         <tbody>
@@ -25,6 +26,7 @@
                 <td>{{ $train['orario_arrivo'] }}</td>
                 <td class="fw-bold">{{ $train['codice_treno'] }}</td>
                 <td>{{ $train['numero_carrozze'] }}</td>
+                <td class="fw-bold"> {{ $train['prezzo'] }}€</td>
                 <td>
                     <span class="badge {{ $train['in_orario'] ? 'bg-success' : 'bg-warning' }}">
                         {{ $train['in_orario'] ? 'In orario' : 'In ritardo' }}
@@ -34,7 +36,8 @@
                     <span class="badge {{ $train['cancellato'] ? 'bg-danger' : 'bg-success' }}">
                         {{ $train['cancellato'] ? 'Cancellato' : 'Confermato' }}
                     </span>
-                </td>          
+                </td>
+                          
             </tr>
             @endforeach
         </tbody>
